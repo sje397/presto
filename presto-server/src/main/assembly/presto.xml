@@ -89,6 +89,10 @@
             <outputDirectory>plugin/hive-hadoop2</outputDirectory>
         </fileSet>
         <fileSet>
+            <directory>${project.build.directory}/dependency/presto-kubernetes-${project.version}</directory>
+            <outputDirectory>plugin/kubernetes</outputDirectory>
+        </fileSet>
+        <fileSet>
             <directory>${project.build.directory}/dependency/presto-memory-${project.version}</directory>
             <outputDirectory>plugin/memory</outputDirectory>
         </fileSet>

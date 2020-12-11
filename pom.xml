@@ -164,6 +164,8 @@
         <module>presto-druid</module>
         <module>presto-common</module>
         <module>presto-thrift-testing-udf-server</module>
+        <module>presto-kubernetes</module>
+        <module>presto-procfs</module>
     </modules>
 
     <dependencyManagement>
@@ -297,6 +299,12 @@
                 <artifactId>presto-hive</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
+            </dependency>
+
+            <dependency>
+                <groupId>io.kubernetes</groupId>
+                <artifactId>client-java</artifactId>
+                <version>10.0.0</version>
             </dependency>
 
             <dependency>
@@ -475,6 +483,18 @@
             <dependency>
                 <groupId>com.facebook.presto</groupId>
                 <artifactId>presto-jdbc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.facebook.presto</groupId>
+                <artifactId>presto-kubernetes</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.facebook.presto</groupId>
+                <artifactId>presto-procfs</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -821,6 +841,12 @@
                 <groupId>io.airlift.tpch</groupId>
                 <artifactId>tpch</artifactId>
                 <version>0.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>0.1.54</version>
             </dependency>
 
             <dependency>
